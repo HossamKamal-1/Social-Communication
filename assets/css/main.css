@@ -1,0 +1,74 @@
+/* Start Variables */
+:root {
+  --body-primary-color: #ede9fe;
+}
+/* End Variables */
+/* Start Global Rules */
+body {
+  background-color: var(--body-primary-color);
+}
+.create-post-btn {
+  width: 48px;
+  height: 48px;
+  bottom: 10px;
+  right: 10px;
+  transition: 0.3s;
+}
+.error-icon,
+.success-icon {
+  top: 50%;
+  transform: translate(50%, -50%);
+  right: calc(1.5rem / 2);
+}
+/* End Global Rules */
+/* Start Skeleton */
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loading 1s linear infinite alternate;
+  cursor: wait;
+}
+.btn.skeleton {
+  cursor: wait;
+}
+
+.skeleton-post-img {
+  height: 400px;
+}
+.skeleton-text {
+  width: 50px;
+  height: 10px;
+}
+@keyframes skeleton-loading {
+  0% {
+    background-color: rgb(129, 129, 129);
+  }
+  100% {
+    background-color: rgba(128, 128, 128, 0.461);
+  }
+}
+/* End Skeleton */
+/* Start Header */
+.profile-info {
+}
+.profile-info .profile-img {
+  width: 40px;
+  height: 40px;
+}
+/* End Header */
+/* Start Posts */
+.post .profile-img {
+  width: 40px;
+  height: 40px;
+}
+.post .count-comments::before {
+  content: '(';
+}
+.post .count-comments::after {
+  content: ')';
+}
+/* End Posts */
+/* Start Comments */
+.comment-item {
+  background-color: #03a9f40f;
+}
+/* End Comments */

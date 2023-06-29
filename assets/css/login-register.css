@@ -1,0 +1,106 @@
+body {
+  background: linear-gradient(to bottom, #0e2954, #1f6e8c);
+}
+.login-register-section {
+  min-height: calc(100vh - 72px);
+}
+.login-register-section .wrapper {
+  width: 900px;
+  min-height: 520px;
+}
+.login-register-section .wrapper .user {
+}
+.login-register-section .img-box,
+.login-register-section .form-box {
+  width: 50%;
+  transition: 0.5s;
+}
+.login-register-section .form-box {
+  padding: 30px;
+}
+.login-register-section .form-box .error-icon,
+.login-register-section .form-box .success-icon {
+  top: 50%;
+  transform: translate(50%, -50%);
+  right: calc(1.5rem / 2);
+}
+
+.sign-up-wrapper {
+  pointer-events: none;
+}
+.strength-indicator {
+  height: 3px;
+  width: calc(100% - 4px);
+  left: 1px !important;
+  background-color: rgba(128, 128, 128, 0.459);
+}
+.strength-indicator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  transition: 0.3s ease;
+}
+.strength-indicator.weak::before {
+  width: 25%;
+  background-color: indianred;
+}
+.strength-indicator.medium::before {
+  width: 75%;
+  background-color: rgb(18, 52, 203);
+}
+.strength-indicator.strong::before {
+  width: 100%;
+  background-color: rgb(4, 152, 4);
+}
+.login-register-section .wrapper.active .sign-up-wrapper {
+  pointer-events: auto;
+}
+.sign-up-wrapper .form-box {
+  top: 100%;
+  min-height: 740px;
+}
+.sign-up-wrapper .img-box {
+  top: -100%;
+}
+.login-register-section .wrapper.active {
+  margin: 25px 0;
+  min-height: 868px;
+}
+.login-register-section .wrapper .sign-in-wrapper .form-box,
+.login-register-section .wrapper .sign-in-wrapper .img-box {
+  background-color: white;
+  z-index: 9999;
+  top: 0;
+}
+.login-register-section .wrapper.active .sign-up-wrapper .form-box,
+.login-register-section .wrapper.active .sign-up-wrapper .img-box {
+  top: 0;
+}
+.login-register-section .wrapper.active .sign-in-wrapper .form-box {
+  top: 100%;
+}
+.login-register-section .wrapper.active .sign-in-wrapper .img-box {
+  top: -100%;
+}
+
+@media (max-width: 991px) {
+  .login-register-section .wrapper {
+    max-width: 450px;
+  }
+  .login-register-section .form-box {
+    width: 100%;
+  }
+  .login-register-section .wrapper .sign-up-wrapper .form-box {
+    top: -142%;
+  }
+}
+
+.upload-progress {
+  height: 1rem;
+}
+.upload-progress .progress {
+  transition: 0.3s;
+}
